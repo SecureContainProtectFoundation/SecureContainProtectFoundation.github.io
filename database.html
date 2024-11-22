@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCP Database - SCP Foundation Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="usa-header">
+        <div class="usa-nav-container">
+            <div class="usa-logo">
+                <img src="scp-logo.png" alt="SCP Logo" class="usa-flag">
+                <h1>SCP Foundation Portal</h1>
+            </div>
+            <nav class="usa-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="database.html">Database</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="personnel.html">Personnel</a></li>
+                    <li><a href="#security">Security</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="database-main">
+        <section class="database-header">
+            <h2>SCP Database Access</h2>
+            <p class="classification">CLASSIFICATION LEVEL: LEVEL 4 CLEARANCE REQUIRED</p>
+        </section>
+
+        <section class="database-search">
+            <div class="search-container">
+                <h3>Database Search</h3>
+                <div class="search-box">
+                    <input type="text" placeholder="Search SCP database..." id="scp-search">
+                    <button type="button" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="search-filters">
+                    <select id="object-class">
+                        <option value="">Object Class</option>
+                        <option value="safe">Safe</option>
+                        <option value="euclid">Euclid</option>
+                        <option value="keter">Keter</option>
+                        <option value="thaumiel">Thaumiel</option>
+                        <option value="apollyon">Apollyon</option>
+                    </select>
+                    <select id="containment-status">
+                        <option value="">Containment Status</option>
+                        <option value="contained">Contained</option>
+                        <option value="uncontained">Uncontained</option>
+                        <option value="neutralized">Neutralized</option>
+                    </select>
+                    <select id="clearance-level">
+                        <option value="">Clearance Level</option>
+                        <option value="level-1">Level 1</option>
+                        <option value="level-2">Level 2</option>
+                        <option value="level-3">Level 3</option>
+                        <option value="level-4">Level 4</option>
+                        <option value="level-5">Level 5</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-entries">
+            <h3>Recent Database Entries</h3>
+            <div class="scp-grid">
+                <div class="scp-card keter">
+                    <div class="scp-header">
+                        <span class="scp-number">SCP-7391</span>
+                        <span class="object-class">KETER</span>
+                    </div>
+                    <h4>The Endless Corridor</h4>
+                    <p class="scp-description">A non-Euclidean architectural anomaly that manifests as an infinitely extending corridor. Personnel entering the corridor report [DATA EXPUNGED].</p>
+                    <div class="scp-footer">
+                        <span class="containment-status">PARTIALLY CONTAINED</span>
+                        <a href="#" class="view-file">Access File</a>
+                    </div>
+                </div>
+
+                <div class="scp-card safe">
+                    <div class="scp-header">
+                        <span class="scp-number">SCP-7392</span>
+                        <span class="object-class">SAFE</span>
+                    </div>
+                    <h4>The Whispering Tome</h4>
+                    <p class="scp-description">An ancient leather-bound book that telepathically communicates its contents to readers within a 3-meter radius.</p>
+                    <div class="scp-footer">
+                        <span class="containment-status">CONTAINED</span>
+                        <a href="#" class="view-file">Access File</a>
+                    </div>
+                </div>
+
+                <div class="scp-card euclid">
+                    <div class="scp-header">
+                        <span class="scp-number">SCP-7393</span>
+                        <span class="object-class">EUCLID</span>
+                    </div>
+                    <h4>Temporal Echo Chamber</h4>
+                    <p class="scp-description">A spherical chamber where time flows non-linearly. Subjects report experiencing multiple temporal versions of themselves simultaneously.</p>
+                    <div class="scp-footer">
+                        <span class="containment-status">CONTAINED</span>
+                        <a href="#" class="view-file">Access File</a>
+                    </div>
+                </div>
+
+                <div class="scp-card thaumiel">
+                    <div class="scp-header">
+                        <span class="scp-number">SCP-7394</span>
+                        <span class="object-class">THAUMIEL</span>
+                    </div>
+                    <h4>[REDACTED]</h4>
+                    <p class="scp-description">[CONTENT RESTRICTED TO LEVEL 5 PERSONNEL ONLY]</p>
+                    <div class="scp-footer">
+                        <span class="containment-status">CLASSIFIED</span>
+                        <a href="#" class="view-file">Access File</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="object-classes">
+            <h3>Object Classifications</h3>
+            <div class="class-grid">
+                <div class="class-card safe-class">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Safe</h4>
+                    <p>Anomalies that are easily contained and pose minimal risk. Standard containment procedures are sufficient.</p>
+                </div>
+
+                <div class="class-card euclid-class">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h4>Euclid</h4>
+                    <p>Anomalies that require more resources to contain and/or are not fully understood. Containment procedures may be complex.</p>
+                </div>
+
+                <div class="class-card keter-class">
+                    <i class="fas fa-skull-crossbones"></i>
+                    <h4>Keter</h4>
+                    <p>Anomalies that are exceedingly difficult to contain or pose a significant threat. Special containment procedures required.</p>
+                </div>
+
+                <div class="class-card thaumiel-class">
+                    <i class="fas fa-key"></i>
+                    <h4>Thaumiel</h4>
+                    <p>Anomalies used to contain other SCPs. Information restricted to high-level personnel only.</p>
+                </div>
+
+                <div class="class-card apollyon-class">
+                    <i class="fas fa-globe-americas"></i>
+                    <h4>Apollyon</h4>
+                    <p>Anomalies that cannot be contained and pose an existential threat. World-ending implications.</p>
+                </div>
+
+                <div class="class-card neutralized-class">
+                    <i class="fas fa-times-circle"></i>
+                    <h4>Neutralized</h4>
+                    <p>Anomalies that have been permanently disabled, destroyed, or otherwise rendered inert.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="access-warning">
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="warning-content">
+                    <h4>ACCESS RESTRICTIONS</h4>
+                    <p>Unauthorized access to classified files will result in immediate termination and administration of Class A amnestics. All database queries are logged and monitored. Some files may require additional clearance levels or O5 Council approval.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="usa-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: [REDACTED]</p>
+                <p>Emergency: Site-specific protocols apply</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="security.html">Security Protocols</a></li>
+                    <li><a href="clearance.html">Clearance Levels</a></li>
+                    <li><a href="#">Emergency Procedures</a></li>
+                    <li><a href="ethics.html">Ethics Committee</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Secure Access</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fas fa-key"></i></a>
+                    <a href="#"><i class="fas fa-lock"></i></a>
+                    <a href="#"><i class="fas fa-shield-alt"></i></a>
+                    <a href="#"><i class="fas fa-user-shield"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SCP Foundation. [REDACTED]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

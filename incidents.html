@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Reports - SCP Foundation Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="usa-header">
+        <div class="usa-nav-container">
+            <div class="usa-logo">
+                <img src="scp-logo.png" alt="SCP Logo" class="usa-flag">
+                <h1>SCP Foundation Portal</h1>
+            </div>
+            <nav class="usa-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#database">Database</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="personnel.html">Personnel</a></li>
+                    <li><a href="#security">Security</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="incidents-main">
+        <section class="incidents-header">
+            <h2>Incident Reports & Containment Breaches</h2>
+            <p class="classification">CLASSIFICATION LEVEL: LEVEL 3 CLEARANCE REQUIRED</p>
+        </section>
+
+        <section class="incident-report-form">
+            <h3>Report New Incident</h3>
+            <form class="report-form">
+                <div class="form-group">
+                    <label for="incident-type">Incident Type</label>
+                    <select id="incident-type" required>
+                        <option value="">Select Incident Type</option>
+                        <option value="containment-breach">Containment Breach</option>
+                        <option value="security-breach">Security Breach</option>
+                        <option value="personnel-exposure">Personnel Exposure</option>
+                        <option value="equipment-failure">Equipment Failure</option>
+                        <option value="anomalous-event">Anomalous Event</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="scp-involved">SCP Object(s) Involved</label>
+                    <input type="text" id="scp-involved" placeholder="Enter SCP designation(s)" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="incident-date">Date of Incident</label>
+                        <input type="date" id="incident-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="incident-time">Time of Incident</label>
+                        <input type="time" id="incident-time" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="incident-location">Location</label>
+                    <input type="text" id="incident-location" placeholder="Facility/Section/Room" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="incident-description">Incident Description</label>
+                    <textarea id="incident-description" rows="5" placeholder="Provide detailed description of the incident..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="casualties">Casualties/Injuries</label>
+                    <textarea id="casualties" rows="3" placeholder="List any casualties or injuries..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="containment-status">Current Containment Status</label>
+                    <select id="containment-status" required>
+                        <option value="">Select Status</option>
+                        <option value="contained">Contained</option>
+                        <option value="partially-contained">Partially Contained</option>
+                        <option value="uncontained">Uncontained</option>
+                        <option value="unknown">Unknown</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-report">Submit Report</button>
+            </form>
+        </section>
+
+        <section class="recent-incidents">
+            <h3>Recent Incidents</h3>
+            <div class="incident-grid">
+                <div class="incident-card critical">
+                    <div class="incident-header">
+                        <span class="incident-type">CONTAINMENT BREACH</span>
+                        <span class="incident-date">2024-01-15</span>
+                    </div>
+                    <h4>SCP-[REDACTED] Containment Failure</h4>
+                    <p class="incident-details">Multiple casualties reported. Site-wide lockdown initiated. MTF Delta-5 deployed.</p>
+                    <div class="incident-footer">
+                        <span class="status critical">UNCONTAINED</span>
+                        <a href="#" class="incident-link">View Report</a>
+                    </div>
+                </div>
+
+                <div class="incident-card warning">
+                    <div class="incident-header">
+                        <span class="incident-type">SECURITY BREACH</span>
+                        <span class="incident-date">2024-01-14</span>
+                    </div>
+                    <h4>Unauthorized Access - Sector 7</h4>
+                    <p class="incident-details">Security systems compromised. Class C amnestics administered to affected personnel.</p>
+                    <div class="incident-footer">
+                        <span class="status contained">CONTAINED</span>
+                        <a href="#" class="incident-link">View Report</a>
+                    </div>
+                </div>
+
+                <div class="incident-card alert">
+                    <div class="incident-header">
+                        <span class="incident-type">EQUIPMENT FAILURE</span>
+                        <span class="incident-date">2024-01-13</span>
+                    </div>
+                    <h4>Primary Containment System Malfunction</h4>
+                    <p class="incident-details">Backup systems engaged. No breaches reported. Maintenance team dispatched.</p>
+                    <div class="incident-footer">
+                        <span class="status resolved">RESOLVED</span>
+                        <a href="#" class="incident-link">View Report</a>
+                    </div>
+                </div>
+
+                <div class="incident-card warning">
+                    <div class="incident-header">
+                        <span class="incident-type">ANOMALOUS EVENT</span>
+                        <span class="incident-date">2024-01-12</span>
+                    </div>
+                    <h4>Temporal Anomaly Detected</h4>
+                    <p class="incident-details">Localized time dilation observed in Research Wing B. Investigation ongoing.</p>
+                    <div class="incident-footer">
+                        <span class="status investigating">INVESTIGATING</span>
+                        <a href="#" class="incident-link">View Report</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="emergency-protocols">
+            <h3>Emergency Response Protocols</h3>
+            <div class="protocol-grid">
+                <div class="protocol-card">
+                    <i class="fas fa-radiation"></i>
+                    <h4>Containment Breach Protocol</h4>
+                    <ul>
+                        <li>Initiate site-wide lockdown</li>
+                        <li>Deploy MTF units</li>
+                        <li>Activate emergency barriers</li>
+                        <li>Begin evacuation procedures</li>
+                    </ul>
+                </div>
+
+                <div class="protocol-card">
+                    <i class="fas fa-biohazard"></i>
+                    <h4>Contamination Protocol</h4>
+                    <ul>
+                        <li>Seal affected areas</li>
+                        <li>Activate decontamination</li>
+                        <li>Issue protective equipment</li>
+                        <li>Prepare quarantine zones</li>
+                    </ul>
+                </div>
+
+                <div class="protocol-card">
+                    <i class="fas fa-skull"></i>
+                    <h4>Casualty Response</h4>
+                    <ul>
+                        <li>Medical team deployment</li>
+                        <li>Triage procedures</li>
+                        <li>Amnestics administration</li>
+                        <li>Containment of exposed</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="security-reminder">
+            <div class="reminder-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="reminder-content">
+                    <h4>SECURITY REMINDER</h4>
+                    <p>All incident reports are automatically logged and tracked. False reporting will result in immediate disciplinary action. If you witness an incident, report it immediately to your supervisor or through this system.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="usa-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Information</h4>
+                <p>Email: [REDACTED]</p>
+                <p>Emergency: Site-specific protocols apply</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="security.html">Security Protocols</a></li>
+                    <li><a href="clearance.html">Clearance Levels</a></li>
+                    <li><a href="#">Emergency Procedures</a></li>
+                    <li><a href="ethics.html">Ethics Committee</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Secure Access</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fas fa-key"></i></a>
+                    <a href="#"><i class="fas fa-lock"></i></a>
+                    <a href="#"><i class="fas fa-shield-alt"></i></a>
+                    <a href="#"><i class="fas fa-user-shield"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SCP Foundation. [REDACTED]</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
